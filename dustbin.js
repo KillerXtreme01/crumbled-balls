@@ -19,9 +19,14 @@ class dustbin
 		World.add(world, this.leftWallBody)
 		World.add(world, this.rightWallBody);
 
+
+		this.dustbinimg = loadImage('trashcangreen.png')
 	}
+
+
 	display()
 	{
+		image(this.dustbinimg, 1100, 450)
 			var posBottom=this.bottomBody.position;
 			var posLeft=this.leftWallBody.position;
 			var posRight=this.rightWallBody.position;
@@ -32,11 +37,15 @@ class dustbin
 			translate(posLeft.x, posLeft.y);
 			rectMode(CENTER)
 			strokeWeight(4);
+			imageMode(CENTER)
 			angleMode(RADIANS)
 			fill(255)
 			
 			rect(0,0,this.wallThickness, this.dustbinHeight);
 			pop()
+
+
+			
 
 			push()
 			translate(posRight.x, posRight.y);

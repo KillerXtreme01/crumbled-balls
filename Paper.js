@@ -18,7 +18,7 @@ World.add(world,this.body)
     var pos = this.body.position;
     push()
     translate(pos.x, pos.y)
-    rectMode(CENTER)
+    ellipseMode(RADIUS)
     fill(0, 255, 191)
     imageMode(CENTER);
     image(this.image, 0, 0, 2*this.r, 2*this.r)
